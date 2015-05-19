@@ -31,7 +31,7 @@ public class MatrixMultiply {
 	  Map<String, HashMap<String, Integer>> matrix = new  HashMap<String,HashMap<String,Integer>>();
 
     /**
-     * 执行map()函数前先由conf.get()得到main函数中提供的必要变量， 这也是MapReduce中共享变量的一种方式
+     * 将第一步获得的邻接矩阵作为共享数据读入内存，用2层HashMap存储<x,<y,1>>
      */
     public void setup(Context context) throws IOException {
     	String line;
